@@ -90,6 +90,7 @@ async function getVersion(
       }
     })
   } catch (err) {
+    // @ts-ignore
     core.debug(err.message)
   }
 
