@@ -292,6 +292,7 @@ async function restoreCacheV2(
 
     return request.key
   } catch (error) {
+    // @ts-ignore
     throw new Error(`Failed to restore: ${error.message}`)
   } finally {
     try {

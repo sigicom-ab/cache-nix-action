@@ -74,6 +74,7 @@ class CacheServiceClient implements Rpc {
 
       return body
     } catch (error) {
+      // @ts-ignore
       throw new Error(`Failed to ${method}: ${error.message}`)
     }
   }
@@ -115,12 +116,15 @@ class CacheServiceClient implements Rpc {
         if (error instanceof UsageError) {
           throw error
         }
-
+        
+        // @ts-ignore
         if (NetworkError.isNetworkErrorCode(error?.code)) {
+          // @ts-ignore
           throw new NetworkError(error?.code)
         }
 
         isRetryable = true
+        // @ts-ignore
         errorMessage = error.message
       }
 
