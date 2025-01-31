@@ -168,7 +168,7 @@ export async function uploadCacheArchiveSDK(
     return response
   } catch (error) {
     core.warning(
-      `uploadCacheArchiveSDK: internal error uploading cache archive: ${error.message}`
+      `uploadCacheArchiveSDK: internal error uploading cache archive: ${(error as Error).message}`
     )
     throw error
   } finally {
