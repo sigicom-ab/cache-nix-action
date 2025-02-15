@@ -30,7 +30,7 @@
     "@buildjet/cache": "file:deps/actions/toolkit/packages/cache",
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",
-    "@actions/github": "^5.1.1",
+    "@actions/github": "^6.0.0",
     "@actions/io": "^1.1.2",
     "dedent": "^1.5.1",
     "handlebars": "^4.7.8"
